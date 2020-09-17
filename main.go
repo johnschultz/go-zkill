@@ -22,7 +22,7 @@ func main() {
 		os.Exit(2)
 	}
 
-	fmt.Println("Connected and subscribed")
+	fmt.Fprintln(os.Stderr, "Connected and subscribed")
 
 	for true {
 		msgType, msg, err := ws.ReadMessage()
